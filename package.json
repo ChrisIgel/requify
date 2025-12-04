@@ -1,20 +1,33 @@
 {
   "name": "requify",
+  "version": "0.1.0",
   "type": "module",
   "private": true,
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
     "generate": "nuxt generate",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
+    "@iconify-json/lucide": "^1.2.77",
     "@nuxt/eslint": "^1.11.0",
+    "@nuxt/fonts": "^0.12.1",
     "@nuxt/icon": "^2.1.0",
+    "@nuxt/ui": "^4.2.1",
+    "date-fns": "^4.1.0",
     "eslint": "^9.39.1",
     "nuxt": "^4.2.1",
     "vue": "^3.5.25",
-    "vue-router": "^4.6.3"
+    "vue-router": "^4.6.3",
+    "zod": "^4.1.13"
+  },
+  "devDependencies": {
+    "@nuxt/eslint": "^1.11.0",
+    "eslint": "^9.39.1",
+    "typescript": "^5.9.3"
   }
 }
