@@ -22,6 +22,14 @@ const links = [[{
   },
 },
 {
+  label: 'Projects',
+  icon: 'i-lucide-briefcase',
+  to: '/projects',
+  onSelect: () => {
+    open.value = false
+  },
+},
+{
   label: 'Settings',
   to: '/settings',
   icon: 'i-lucide-settings',
@@ -95,14 +103,17 @@ onMounted(async () => {
       class="bg-elevated/25"
       :ui="{ footer: 'lg:border-t lg:border-default' }"
     >
-      <template #header>
+      <template #header="{ collapsed }">
         <NuxtLink
           to="/"
-          class="flex items-end gap-2 hover:opacity-90"
+          class="flex items-end gap-2 hover:opacity-90 overflow-hidden"
           aria-label="Requify home"
+          :class="{ 'mx-auto': collapsed }"
         >
-          <span class="text-2xl font-semibold leading-none">Requify</span>
-          <span>
+          <span class="text-2xl font-semibold leading-none">
+            {{ collapsed ? 'R' : 'Requify' }}
+          </span>
+          <span v-if="!collapsed">
             <UBadge size="sm" color="neutral" variant="subtle">v{{ $config.public.version }}</UBadge>
           </span>
         </NuxtLink>

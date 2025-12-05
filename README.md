@@ -1,6 +1,6 @@
-# Nuxt Minimal Starter
+# Requify
 
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+A web based application that aims to manage requirements for complex projects and applications.
 
 ## Setup
 
